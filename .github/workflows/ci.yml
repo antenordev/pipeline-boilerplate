@@ -16,33 +16,9 @@ jobs:
       - name: Run a one-line script
         run: echo Building
   
-  develop:
+  test:
     runs-on: ubuntu-latest
-    environment:
-      name: develop
     needs: build
     steps:
       - name: Run a one-line script
-        run: echo Develop
-  
-  staging:
-    runs-on: ubuntu-latest
-    environment:
-      name: staging
-      # Preview Staging
-      url: 'https://github.com/antenordev/pipeline-boilerplate'
-    needs: develop
-    steps:
-      - name: Run a one-line script
-        run: echo Staging
-  
-  main:
-    runs-on: ubuntu-latest
-    environment:
-      name: main
-      # Preview Main
-      url: 'https://github.com/antenordev/pipeline-boilerplate'
-    needs: staging
-    steps:
-      - name: Run a one-line script
-        run: echo Main
+        run: echo Test
