@@ -1,40 +1,50 @@
-name: CI
+name: CI Process
 on:
   workflow_dispatch:
   
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        run: echo Hello, World!
+        run: echo Linting
+
+  build:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Run a one-line script
+        run: echo Building
   
   develop:
     runs-on: ubuntu-latest
     environment:
       name: develop
-      url: 'github.com/antenordev/pipeline-boilerplate'
+      # Preview Develop
+      url: 'https://github.com/antenordev/pipeline-boilerplate'
     needs: build
     steps:
       - name: Run a one-line script
-        run: echo CI Develop
+        run: echo Develop
   
   staging:
     runs-on: ubuntu-latest
     environment:
       name: staging
-      url: 'github.com/antenordev/pipeline-boilerplate'
+      # Preview Staging
+      url: 'https://github.com/antenordev/pipeline-boilerplate'
     needs: develop
     steps:
       - name: Run a one-line script
-        run: echo CI Staging
+        run: echo Staging
   
   main:
     runs-on: ubuntu-latest
     environment:
       name: main
-      url: 'github.com/antenordev/pipeline-boilerplate'
+      # Preview Main
+      url: 'https://github.com/antenordev/pipeline-boilerplate'
     needs: staging
     steps:
       - name: Run a one-line script
-        run: echo CI Main
+        run: echo Main
