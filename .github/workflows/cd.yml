@@ -32,7 +32,7 @@ jobs:
     needs: test
     steps:
       - name: Run a one-line script
-        run: echo Deploy Develop
+        run: echo Deploy Homologation
   
   staging:
     runs-on: ubuntu-latest
@@ -52,4 +52,4 @@ jobs:
     needs: staging
     steps:
       - name: Run a one-line script
-        run: echo Main
+        run: echo Deploy Production
