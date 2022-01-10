@@ -13,11 +13,12 @@ jobs:
     steps:
       - name: Run lint
         run: echo linting
-        uses: actions/checkout@v2
+      - name: Checkout latest version
+      - uses: actions/checkout@v2
         with:
           - fetch-depth: 0
       - name: Check commit message
-        uses: wagoid/commitlint-github-action@v1
+      - uses: wagoid/commitlint-github-action@v1
 
   build:
     runs-on: ubuntu-latest
