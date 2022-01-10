@@ -1,11 +1,11 @@
 name: CD Process
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - develop
+  push:
+    branches:
+      - main
   
 jobs:
   lint:
@@ -41,8 +41,6 @@ jobs:
   
   staging:
     runs-on: ubuntu-latest
-    environment:
-      name: staging
     needs: develop
     steps:
       - name: Run a one-line script
