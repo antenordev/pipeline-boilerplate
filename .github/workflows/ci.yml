@@ -1,4 +1,4 @@
-name: CI Process
+name: Continuous Integration Process
 on: [push, pull_request]
   
 jobs:
