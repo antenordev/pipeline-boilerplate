@@ -4,16 +4,18 @@ on:
   pull_request:
     branches:
       - develop
-  push:
-    branches:
-      - main
   
 jobs:
   lint:
     runs-on: ubuntu-latest
+    env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Run lint
         run: echo linting
+        uses: actions/checkout@v2
+        with:
+          - fetch-depth: 0
       - name: Check commit message
         uses: wagoid/commitlint-github-action@v1
 
