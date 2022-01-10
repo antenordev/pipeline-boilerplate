@@ -9,3 +9,8 @@ run lint
 ```js
 run build
 ```
+
+## Test Job
+```js
+run test
+```
