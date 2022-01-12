@@ -1,7 +1,8 @@
 name: Continuous Integration Process
 
-# on: [pull_request]
-on: workflow_dispatch
+on:
+  pull_request:
+    branches: [ develop ]
 
 jobs:
   lint:
@@ -30,8 +31,8 @@ jobs:
       run: echo 'yarn lint'
       
   build:
-    runs-on: ubuntu-latest
     needs: lint
+    runs-on: ubuntu-latest
     steps:
 
     - name: Run build...
@@ -44,8 +45,8 @@ jobs:
       run: echo 'yarn build'
   
   test:
-    runs-on: ubuntu-latest
     needs: build
+    runs-on: ubuntu-latest
     steps:
     
     - name: Run test...

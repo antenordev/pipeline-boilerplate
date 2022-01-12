@@ -1,21 +1,21 @@
-# Descrição das modificações
+# Description of changes
 
-Inclua um resumo da alteração e qual problema foi corrigido. Inclua também motivação e contexto relevantes. Liste todas as dependências necessárias para essa alteração. Se existir, descreva a história de usuário.
+Include a summary of the change and which issue was fixed. Also include relevant motivation and context. List all dependencies required for this change. If it exists, describe the user story.
 
 Fixes #(issue)
 
-### Novas Dependências
+### New Dependencies
 
-- nome: razão para inclusão.
+- name: Reason for inclusion.
 
-## Tipos de Modificações
+## Types of Modifications
 
-- [ ] Correção de erro
-- [ ] Nova funcionalidade
-- [ ] Breaking Change (correção ou recurso que faria com que a funcionalidade existente não funcionasse conforme o esperado)
+- [ ] Error correction
+- [ ] New functionality
+- [ ] Breaking Change (fix or feature that would cause existing functionality to not work as expected)
 
 ## Checklist
 
-- [ ] Executei o script de build
-- [ ] Adicionei uma nova dependência no projeto
-- [ ] Minhas alterações não geram warnigs
+- [ ] I ran the build script
+- [ ] I added a new dependency in the project
+- [ ] My changes do not generate warnings

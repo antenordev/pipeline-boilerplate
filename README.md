@@ -1,16 +1,57 @@
 # DOCS Workflows
 
-## Lint Job
+## PR - Pull Request
+
+### Template PR
+
 ```js
-run lint
+runs every time a PR is created
 ```
 
-## Build Job
+## CI - Continuous Integration
+
+### Lint Job
+
 ```js
-run build
+code lint wheel
 ```
 
-## Test Job
+### Build Job
+
 ```js
-run test
+application build wheel
+```
+
+### Test Job
+
+```js
+application test wheel
+```
+
+## Release - Create Release
+
+### Release Job
+
+```js
+create version release
+```
+
+## CD - Continuous Deployment
+
+### Develop Job
+
+```js
+performs approval deployment
+```
+
+### Staging Job
+
+```js
+staging area
+```
+
+### Main Job
+
+```js
+production deployment wheel
 ```
